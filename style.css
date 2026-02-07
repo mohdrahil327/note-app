@@ -1,0 +1,126 @@
+:root {
+  --bg: #0f172a;
+  --card: rgba(255,255,255,0.1);
+  --glass: blur(12px);
+  --text: #ffffff;
+  --accent: #6366f1;
+}
+
+.light {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #0f172a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg,#6366f1,#22d3ee);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.app {
+  width: 100%;
+  max-width: 480px;
+  background: var(--card);
+  backdrop-filter: var(--glass);
+  border-radius: 20px;
+  padding: 20px;
+  color: var(--text);
+  box-shadow: 0 15px 40px rgba(0,0,0,.2);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 26px;
+}
+
+header button {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.controls input {
+  width: 100%;
+  margin: 15px 0;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.add-box textarea {
+  width: 100%;
+  height: 90px;
+  padding: 12px;
+  border-radius: 12px;
+  resize: none;
+  border: none;
+}
+
+.add-box button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.add-box button:hover {
+  opacity: 0.9;
+}
+
+.note {
+  background: rgba(255,255,255,0.15);
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 15px;
+  animation: fadeIn .3s ease;
+}
+
+.note textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  resize: none;
+  outline: none;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform:scale(.9)}
+  to {opacity:1; transform:scale(1)}
+}
